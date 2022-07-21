@@ -1,17 +1,16 @@
-# include <stdio.h>
+# include<stdio.h>
 int main()
 {
-	int n=1,m=1,i=1,sum=0;
-	while(n<11)
+	int arr[]={1,2,3,4,5,6,8,9,10,7};
+	int x,k,n=0;
+	scanf("%d",&k);
+	while(n<10)
 	{
-		 while(i<=n)
+		if (arr[n]==k)
 		{
-			m=m*i;
-			i++;
-		}
-		printf("n的阶乘为：%d\n",m);
-		sum+=m;
-		n++;	 
-	} 
-        printf("10的阶乘和为：%d\n",sum);   
-}
+			printf("%d\n找到了目的数组下标为：%d\n",arr[n],n);
+			break;
+		}		
+		n++;
+	}
+} 
